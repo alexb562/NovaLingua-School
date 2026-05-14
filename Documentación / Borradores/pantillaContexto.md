@@ -67,7 +67,6 @@ Plantilla para el análisis de requerimientos de la infraestructura informática
 
 - **VPN:** Sí. Se configurará una VPN site-to-site para conectar de forma segura las tres sedes de la empresa. Además, se habilitará acceso VPN remoto para empleados autorizados que trabajen fuera de la oficina, usando credenciales corporativas y autenticación segura.
 
-## 5. Base de Datos
 
 ## 5. Base de Datos
 
@@ -92,6 +91,14 @@ Plantilla para el análisis de requerimientos de la infraestructura informática
   - [x] Acceso a usuarios registrados
   - [x] Catálogo de productos/servicios
 - **Tecnología deseada:** Angular (Frontend), Spring Boot(Backend), MySQL(BD), Astro-Wordpress (landing page)
+
+### Ejemplos iniciales de inicio (generados por IA)
+![alt text](ejemplosDiseno/logo.png)
+- Logo
+![alt text](ejemplosDiseno/vistaMovil.png)
+- Vista de móvil
+![alt text](ejemplosDiseno/landingPage.png)
+- Landing page
 
 ## 7. Otros Requisitos
 
