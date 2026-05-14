@@ -91,7 +91,7 @@ Plantilla para el análisis de requerimientos de la infraestructura informática
   - [x] Informativa
   - [x] Acceso a usuarios registrados
   - [x] Catálogo de productos/servicios
-- **Tecnología deseada:** [HTML/CSS, PHP, ]
+- **Tecnología deseada:** Angular (Frontend), Spring Boot(Backend), MySQL(BD), Astro-Wordpress (landing page)
 
 ## 7. Otros Requisitos
 
