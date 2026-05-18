@@ -30,7 +30,6 @@ Plantilla para el análisis de requerimientos de la infraestructura informática
 - **Servicios informáticos requeridos:**
   - [x] Correo electrónico empresarial
   - [x] Almacenamiento y compartición de archivos
-  - [x] Servidor web corporativo
   - [x] Gestión de usuarios y permisos (Active Directory)
   - [x] Servidor de base de datos
   - [x] Aplicaciones específicas (si da tiempo - una aplicación móvil)
@@ -158,18 +157,21 @@ Sigue la regla de 3-2-1 - varias copias en dispositivos diferentes en lugares f�
 ## 5. Base de Datos
 
 - **Tipo de información a almacenar:**  
-  La base de datos almacenará información relacionada con alumnos, profesores, cursos, matrículas, horarios de clases, pagos, incidencias de soporte, materiales académicos y usuarios de la plataforma online.
+  La base de datos almacenará información relacionada con alumnos, profesores, dirección, clases, información de contacto. 
 
 - **Número estimado de registros:**  
-  Se estima un volumen inicial aproximado de 10.000 a 15.000 registros, incluyendo alumnos activos e históricos, profesores, cursos, matrículas, sesiones de clase, incidencias y pagos. La base de datos deberá ser escalable para permitir el crecimiento de la empresa durante los próximos años.
+  Se estima un volumen inicial aproximado de 5.000 a 8.000 registros, incluyendo:
+  - Alumnos: numero expediente, nombre, información de contacto (número teléfono, correo),
+  - Dirección / Profesores: - número identificador, nombre, nombre, información de contacto (número teléfono, correo), código de clase.
+  - Clases / Horarios - código integrador de clase, nombre de clase, idioma, nivel de idioma, día de la semana, hora de empezar, hora de terminar.
+  - Asignación - relación entre todas las entidades
+- La base de datos deberá ser escalable para permitir el crecimiento de la empresa durante los próximos años.
 
 - **Usuarios con acceso a la BD:**  
   El acceso directo a la base de datos estará limitado al departamento de IT y Desarrollo. El resto de usuarios accederá a la información mediante la plataforma online, con permisos según su rol:
-  - **Administración:** acceso a datos de alumnos, matrículas, facturación y pagos.
-  - **Equipo Académico:** acceso a cursos, horarios, materiales y seguimiento académico de alumnos.
-  - **Profesores:** acceso limitado a sus clases, alumnos asignados y materiales docentes.
-  - **Atención al Cliente:** acceso a datos básicos de alumnos e incidencias.
-  - **Marketing y Ventas:** acceso limitado a información comercial y estadísticas, sin acceso a datos sensibles.
+  - **Administración:** acceso a datos de alumnos, profesores, clases y asignaciones.
+  - **Equipo Académico:** acceso a clases, horarios y listado de alumnos.
+  - **Profesores:** acceso limitado a sus propias clases y alumnos asignados.
 
 ## 6. Sitio Web
 
@@ -189,6 +191,11 @@ Sigue la regla de 3-2-1 - varias copias en dispositivos diferentes en lugares f�
 
 ## 7. Otros Requisitos
 
-- **Presupuesto estimado:** 60.000
-- **Crecimiento previsto:** Se previste añadir más profesores en los próximos años, ya que la demanada es alta. 
-- **Mantenimiento:** Interno
+- **Presupuesto estimado:**  
+  Se estima una inversión inicial aproximada de **60.000 €** para la implantación de la infraestructura informática de la empresa. Este presupuesto incluye equipos de usuario, servidores, almacenamiento, dispositivos de red, cableado, seguridad, licencias básicas y puesta en marcha de los servicios principales.
+
+- **Crecimiento previsto:**  
+  Se prevé la incorporación de nuevos profesores, alumnos y personal de soporte durante los próximos años, debido al aumento de la demanda de formación online. La infraestructura deberá ser escalable para permitir la creación de nuevas cuentas de usuario, ampliación del almacenamiento, crecimiento de la base de datos y aumento del número de clases online.
+
+- **Mantenimiento:**  
+  El mantenimiento será principalmente **interno**, gestionado por el departamento de IT / Sistemas. Este departamento se encargará de la administración de usuarios, servidores, red, copias de seguridad, seguridad informática y soporte técnico básico. Para tareas especializadas, como ampliaciones importantes, auditorías de seguridad o reparaciones de hardware, se podrá recurrir a proveedores externos.
