@@ -68,7 +68,7 @@ Rangos potenciales:
 |                80 Invitados | `10.10.80.0/24` | `10.10.80.1` |
 |     90 Gestión/Admin de red | `10.10.90.0/24` | `10.10.90.1` |
 
-- Braga y Coímbra no necesitan tantos VLANs ya que no contienen la infraestructura crítica de la red en general. Tiene en mente la separación por acceso. Por ejemplo, todos los invitados no tienen acceso al resto de la red. Si un atacante invadiera al VLAN invitado, no podrían acceder a la sección de servidores, IT etc. Por defécto se bloquea todo y luego se permite comunicación entre VLANs. Por ejemplo, IT tendría acceso a todos VLANs, Dirección a los servidores, Atención al Cliente, Marketing, y IT, etc. 
+- Braga y Coímbra no necesitan tantos VLANs ya que no contienen la infraestructura crítica de la red en general. Tiene en mente la separación por acceso. Por ejemplo, todos los invitados no tienen acceso al resto de la red. Si un atacante invadiera al VLAN invitado, no podrían acceder a la sección de servidores, IT etc. Por defecto se bloquea todo y luego se permite comunicación entre VLANs. Por ejemplo, IT tendría acceso a todos VLANs, Dirección a los servidores, Atención al Cliente, Marketing, y IT, etc. 
 
 ##### VLANs - Braga
 |                VLAN | Network         | Gateway      |
