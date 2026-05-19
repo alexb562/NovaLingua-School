@@ -9,10 +9,57 @@ Para la mayoría de los dispositivos de red se comprará desde Unifi/Ubiquiti. V
 - Sus routers proporcionan seguridad avanzada, incluyendo firewalls stateful y nivel 7, IDS/IPS, bloqueo de publicidades etc.
 
 
-## Servidor
+## Servidores / NAS
 - Ya que esta empresa no es una muy granda dedicada exclusivamente a la tecnología, tendría sentido usar un único servidor de torre con máquinas virtuales. Esta configuración se suele usar en empresas medianas - ahorra mucho dinero y se puede gestionar fácilmente tanto físicamente cómo lógicamente.
 
 ### Dell PowerEdge T360
+[url][https://www.pccomponentes.com/dell-poweredge-t360-intel-xeon-e-2478-16gb-480gb-ssd]
+
+| Especificación        | Dell PowerEdge T360                                                     |
+| --------------------- | ----------------------------------------------------------------------- |
+| Tipo                  | Servidor torre empresarial                                              |
+| Uso en el proyecto    | Servidor físico principal en Porto para virtualización                  |
+| Formato               | Torre 4.5U, apto para oficina o sala técnica                            |
+| Procesador            | 1 × Intel Xeon E-2400 / Xeon 6300 Series, hasta 8 núcleos               |
+| RAM máxima            | Hasta 128 GB DDR5 ECC UDIMM (viene con 16)                              |
+| RAM recomendada       | 64 GB ECC DDR5, ampliable a 128 GB                                      |
+| Bahías de disco       | Hasta 4 u 8 discos frontales, según configuración                       |
+| Almacenamiento máximo | Hasta 128 TB con discos SAS/SATA (viene con 480GB)                      |
+| Controladora RAID     | Compatible con PERC / HBA según configuración                           |
+| Red                   | Puertos Ethernet integrados, ampliable con tarjetas adicionales         |
+| Gestión remota        | iDRAC / Dell OpenManage                                                 |
+| Servicios previstos   | Active Directory, DNS, DHCP, archivos, web/LMS, base de datos y backups |
+| Virtualización        | Proxmox VE                                                              |
+| Precio estimado       | 2.649                                                                   |
+
+#### RAM y almacenamiento extra
+- Según calculaciones de IA, se recomienda usar: 
+2x480GB de almacenamiento SSD de Proxmox (programa de virtualización)
+- 2x2TB SSD para las máquinas virtuales
+- Por lo menos 64GB RAM
+
+##### RAM
+Kingston DDR5 2x16GB RAM
+[url][https://www.pccomponentes.com/memoria-ram-kingston-32gb-2x16gb-ddr5-6000mt-s-fury-beast-expo-black]
+
+| Especificación       | Kingston FURY Beast 32GB DDR5                    |
+| -------------------- | ------------------------------------------------ |
+| Capacidad            | 32 GB                                            |
+| Configuración        | 2 × 16 GB                                        |
+| Tipo                 | DDR5                                             |
+| Velocidad            | 6000 MT/s                                        |
+| Perfil               | AMD EXPO / Intel XMP 3.0                         |
+| Formato              | DIMM de escritorio                               |
+| Color                | Negro                                            |
+| Uso recomendado      | PC gaming / creación / workstation de escritorio |
+| Precio PcComponentes | 510 €                                            |
+| Opiniones            | 4,8/5 con 52 opiniones                           |
+| Referencia           | KF560C30BBEK2-32                                 |
+
+
+
+##### Almacenamiento
+
 
 
 
