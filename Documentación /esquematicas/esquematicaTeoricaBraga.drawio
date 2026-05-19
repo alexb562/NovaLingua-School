@@ -1,0 +1,69 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="kTE4_q85uWjOLaW5Oo0g">
+    <mxGraphModel dx="872" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-1" value="" style="endArrow=none;html=1;rounded=0;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="B04nk8VeOCP8WJUrBHBI-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="462.5" y="240" as="sourcePoint" />
+            <mxPoint x="474" y="87" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="B04nk8VeOCP8WJUrBHBI-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="150" as="sourcePoint" />
+            <mxPoint x="670" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-3" value="" style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="B04nk8VeOCP8WJUrBHBI-2">
+          <mxGeometry width="20" height="14" relative="1" as="geometry">
+            <mxPoint x="-10" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-6" value="" style="shape=mxgraph.cisco.security.network_security;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="385" y="137.5" width="45" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-7" value="Router/Firewall Braga" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="107.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-8" value="" style="shape=mxgraph.cisco.routers.router;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="140" width="78" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-9" value="VPN Site-to-Site Porto (a Coímbra via Porto)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-11" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#2D7600;fillColor=#60a917;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.vpn;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="568" y="40" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-12" value="WAN" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="30" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-14" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#ff0000;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="433" y="230" width="72" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-15" value="" style="endArrow=none;html=1;rounded=0;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="230" as="sourcePoint" />
+            <mxPoint x="474.25" y="191.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-16" value="Switch Gestionable" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="514" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-17" value="VLAN 40 Académico" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="424" y="270" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-18" value="VLAN 50 Atención a Cliente" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="423" y="320" width="91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-19" value="VLAN 80 Invitados WiFi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="423" y="370" width="91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="B04nk8VeOCP8WJUrBHBI-20" value="VLAN 90 Gestión" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="424" y="420" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,146 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="mS1qbadstGZTs5P1IIgd">
+    <mxGraphModel dx="1026" dy="1639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TA8T5oiz_u27AP8pypfV-1" value="WAN" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="369" y="-100" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-3" value="" style="endArrow=none;html=1;rounded=0;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="TA8T5oiz_u27AP8pypfV-15" target="TA8T5oiz_u27AP8pypfV-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="412.5" y="110" as="sourcePoint" />
+            <mxPoint x="450" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="TA8T5oiz_u27AP8pypfV-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="455" y="20" as="sourcePoint" />
+            <mxPoint x="620" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-8" value="" style="shape=message;html=1;outlineConnect=0;" parent="TA8T5oiz_u27AP8pypfV-7" vertex="1">
+          <mxGeometry width="20" height="14" relative="1" as="geometry">
+            <mxPoint x="-10" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="TA8T5oiz_u27AP8pypfV-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="458.00369251325276" y="42.78195982931709" as="sourcePoint" />
+            <mxPoint x="665.63" y="-40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-14" value="" style="shape=message;html=1;outlineConnect=0;" parent="TA8T5oiz_u27AP8pypfV-13" vertex="1">
+          <mxGeometry width="20" height="14" relative="1" as="geometry">
+            <mxPoint x="-10" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-17" value="" style="shape=mxgraph.cisco.security.network_security;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="335" y="7.5" width="45" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-18" value="Router/Firewall Porto" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="-22.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-19" value="" style="endArrow=none;html=1;rounded=0;entryX=0.55;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" target="TA8T5oiz_u27AP8pypfV-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="412.5" y="110" as="sourcePoint" />
+            <mxPoint x="413" y="-13" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-15" value="" style="shape=mxgraph.cisco.routers.router;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="380" y="10" width="78" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-21" value="VPN Site-to-Site Braga" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="660" y="-90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-22" value="VPN Site-to-Site Coímbra" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="705" y="-22.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-23" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#ff0000;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="380" y="100" width="72" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-24" value="Switch Central" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="450" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-25" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="170" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-26" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="380" y="170" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-28" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TA8T5oiz_u27AP8pypfV-25" target="TA8T5oiz_u27AP8pypfV-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="130" as="sourcePoint" />
+            <mxPoint x="320" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-29" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TA8T5oiz_u27AP8pypfV-26" target="TA8T5oiz_u27AP8pypfV-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="130" as="sourcePoint" />
+            <mxPoint x="320" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-30" value="" style="shape=mxgraph.cisco.switches.workgroup_switch;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="640" y="160" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0.87;entryY=0.74;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.16;exitY=0.23;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TA8T5oiz_u27AP8pypfV-30" target="TA8T5oiz_u27AP8pypfV-23" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="250" as="sourcePoint" />
+            <mxPoint x="410" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-34" value="Switch Access 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-35" value="Switch Access 2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="458" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-36" value="Switch Servidores / DMZ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="720" y="150" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-37" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#2D7600;fillColor=#60a917;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.vpn;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="640" y="11.5" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-38" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#2D7600;fillColor=#60a917;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.vpn;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="518" y="-90" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-39" value="VLAN 10 Dirección" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="362" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-41" value="VLAN 70 Gestión" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="310" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-43" value="VLAN 20 Desarrollo" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-45" value="VLAN 50 Atención a Cliente" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="361.5" y="260" width="91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-46" value="VLAN 60 Marketing / Ventas" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="362" y="310" width="91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-47" value="VLAN 60 Invitados WiFi" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="260" width="91" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-48" value="VLAN 70 Servicios Internos" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="210" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-51" value="AD" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="588" y="250" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-55" value="BD" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="588" y="280" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-59" value="Web / LMS" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="250" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-60" value="Archivos" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="280" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TA8T5oiz_u27AP8pypfV-61" value="NAS Backup" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="635" y="310" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
