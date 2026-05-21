@@ -110,3 +110,8 @@ La gestión y revisión de las copias será responsabilidad del departamento de 
 ![alt text](../../esquematicas/esquematicaTeoricaCoimbra.drawio.svg)
 
 ### Esquemática Packet Tracer
+
+![alt text](../../esquematicas/ptPorto.png)
+![alt text](../../esquematicas/ptBraga.png)
+![alt text](../../esquematicas/ptCoimbra.png)
+
