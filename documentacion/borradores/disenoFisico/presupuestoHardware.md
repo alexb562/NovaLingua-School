@@ -558,6 +558,8 @@ Se utilizarán impresoras multifunción láser para cubrir las necesidades de im
 
 
 
+
+
 # Resumen final del presupuesto
 
 | Categoría | Total aproximado |
@@ -576,3 +578,29 @@ Se utilizarán impresoras multifunción láser para cubrir las necesidades de im
 | Monitores y periféricos | 13.305 € |
 | Impresoras | 1.800 € |
 | **Total estimado** | **83.693,50 €** |
+
+# Costes adicionales mensuales/anuales
+## Presupuesto de software, licencias e Internet
+
+| Elemento | Producto recomendado | Cantidad | Precio unitario aprox. | Subtotal aprox. | Tipo de coste | Uso |
+|---|---|---:|---:|---:|---|---|
+| Suite ofimática y correo | Microsoft 365 Empresa Estándar | 60 usuarios | 10,83 €/mes | 649,80 €/mes / 7.797,60 €/año | Mensual/anual | Correo corporativo, Office, OneDrive, Teams y colaboración |
+| Sistema operativo servidor | Windows Server Standard | 1 licencia | 1.100 € - 1.300 € | 1.200 € aprox. | Compra inicial | Active Directory, DNS, DHCP y servicios internos |
+| CALs de usuario | Windows Server User CAL | 60 usuarios | 35 € - 45 € | 2.400 € aprox. | Compra inicial | Permitir acceso legal de usuarios a servicios Windows Server |
+| Virtualización | Proxmox VE | 1 servidor | 0 € | 0 € | Gratis | Plataforma de virtualización para las máquinas virtuales |
+| Soporte Proxmox opcional | Proxmox VE Community | 1 CPU socket | 120 €/año | 120 €/año | Anual opcional | Repositorio empresarial y soporte básico |
+| Antivirus/EDR | Bitdefender / ESET / Microsoft Defender for Business | 65 dispositivos | 30 € - 50 €/año | 2.600 € aprox. | Anual | Protección de portátiles y servidores |
+| Backup software | Synology Active Backup / Hyper Backup | Incluido con NAS | 0 € | 0 € | Incluido | Copias de seguridad y replicación entre NAS |
+| Dominio web | Dominio `.com` / `.pt` | 1 | 15 € - 25 €/año | 20 €/año | Anual | Dominio público de la empresa |
+| Certificado SSL | Let’s Encrypt | 1 | 0 € | 0 € | Gratis | HTTPS para web y plataforma |
+| Internet empresarial Porto | Fibra empresarial | 1 línea | 80 € - 120 €/mes | 1.200 €/año aprox. | Mensual/anual | Conexión principal sede Porto |
+| Internet empresarial Braga | Fibra empresarial | 1 línea | 60 € - 100 €/mes | 960 €/año aprox. | Mensual/anual | Conexión sede Braga |
+| Internet empresarial Coimbra | Fibra empresarial | 1 línea | 60 € - 100 €/mes | 960 €/año aprox. | Mensual/anual | Conexión sede Coimbra |
+| IP fija | IP fija pública | 3 sedes | 10 €/mes | 360 €/año | Mensual/anual | VPN site-to-site y servicios corporativos |
+
+## Totales
+| Tipo de coste | Total aproximado |
+|---|---:|
+| Costes iniciales software/licencias | 3.600 € |
+| Costes anuales software/servicios | 16.000 € - 17.000 €/año |
+| Costes mensuales aproximados | 1.300 € - 1.500 €/mes |
