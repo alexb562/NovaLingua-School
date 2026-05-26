@@ -11,6 +11,7 @@ Plantilla para el diseño lógico de la red e infraestructura informática de un
   - Switches de acceso por departamento
 
 ### Porto
+### Porto
 | VLAN | Nombre | Network | Gateway |
 | ---: | ------ | ------- | ------- |
 | 10 | Dirección-Administración | `10.10.10.0/24` | `10.10.10.1` |
@@ -19,10 +20,12 @@ Plantilla para el diseño lógico de la red e infraestructura informática de un
 | 50 | Marketing-Ventas | `10.10.50.0/24` | `10.10.50.1` |
 | 60 | Invitados | `10.10.60.0/24` | `10.10.60.1` |
 | 70 | Gestión de red y Servidores | `10.10.70.0/24` | `10.10.70.1` |
+| 80 | Wi-Fi Corporativo | `10.10.80.0/24` | `10.10.80.1` |
 
 
 
 ### Braga
+
 
 | VLAN | Nombre | Network | Gateway |
 | ---: | ------ | ------- | ------- |
@@ -30,6 +33,7 @@ Plantilla para el diseño lógico de la red e infraestructura informática de un
 | 40 | Atención-Cliente | `10.20.40.0/24` | `10.20.40.1` |
 | 60 | Invitados | `10.20.60.0/24` | `10.20.60.1` |
 | 70 | Gestión de red | `10.20.70.0/24` | `10.20.70.1` |
+| 80 | Wi-Fi Corporativo | `10.20.80.0/24` | `10.20.80.1` |
 
 
 
@@ -40,7 +44,7 @@ Plantilla para el diseño lógico de la red e infraestructura informática de un
 | 40 | Atención-Cliente | `10.30.40.0/24` | `10.30.40.1` |
 | 60 | Invitados | `10.30.60.0/24` | `10.30.60.1` |
 | 70 | Gestión de red | `10.30.70.0/24` | `10.30.70.1` |
-
+| 80 | Wi-Fi Corporativo | `10.30.80.0/24` | `10.30.80.1` |
 
 
 ## 🖥️ 3. Servidores y Servicios Lógicos
@@ -60,7 +64,7 @@ Los servicios principales estarán centralizados en la sede de Porto, dentro de 
 ## 🔒 4. Seguridad Lógica
 
 ### Firewall 
-Controla tráfico entre VLANs e Internet. La seguridad perimetral se gestionará mediante los routers/firewalls UniFi instalados en cada sede. En Porto se utilizará el gateway principal como firewall central, mientras que Braga y Coimbra tendrán gateways propios conectados a Porto mediante VPN site-to-site.
+Controla tráfico entre VLANs e Internet. La seguridad perimetral se gestionará mediante los routers/firewalls UniFi instalados en cada sede. En Porto se utilizará el gateway principal como firewall central, mientras que Braga y Coimbra tendrán gateways propios conectados a Porto mediante VPN site-to-site. La VLAN 80 se utilizará para el Wi-Fi corporativo de empleados. Esta red estará separada de la VLAN 60 de invitados, permitiendo aplicar políticas de seguridad diferenciadas. El SSID corporativo se asociará a la VLAN 80, mientras que el SSID de invitados se asociará a la VLAN 60 y permanecerá aislado de los recursos internos.
 ### VPN
 
 Se implementarán conexiones **VPN site-to-site** entre las sedes de Porto, Braga y Coimbra para permitir la comunicación segura entre oficinas. La sede de Porto actuará como sede central, ya que allí se encuentran los servidores principales, la VLAN de gestión y servidores, el NAS principal y los servicios internos.

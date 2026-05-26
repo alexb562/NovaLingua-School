@@ -40,7 +40,7 @@ Plantilla para el análisis de requerimientos de la infraestructura informática
 - **Topología deseada:** Estrella jerárquica 
 - **Segmentación de red:** Sí - uso de VLANs
 - **Firewall / Seguridad perimetral:** Sí
-- **Wi-Fi corporativo:** Sí - acceso invitados separado
+- **Wi-Fi corporativo:** Sí - red Wi-Fi corporativa separada y acceso de invitados aislado
 
 
 #### Diseño VLANs y IP
@@ -62,6 +62,7 @@ Para mantener una numeración coherente, se utilizará el mismo número de VLAN 
 | 50 | Marketing y Ventas |
 | 60 | Invitados Wi-Fi |
 | 70 | Gestión de red y Servidores |
+| 80 | Wi-Fi Corporativo |
 
 - Es esencial dividir cada sitio en cuanto a su función para crear un nivel alto de seguridad. Por ejemplo, lo siguiente puede ser un ejemplo de cómo se dividiría cada sede:
 
@@ -74,6 +75,7 @@ Para mantener una numeración coherente, se utilizará el mismo número de VLAN 
 | 50 | Marketing-Ventas | `10.10.50.0/24` | `10.10.50.1` |
 | 60 | Invitados | `10.10.60.0/24` | `10.10.60.1` |
 | 70 | Gestión de red y Servidores | `10.10.70.0/24` | `10.10.70.1` |
+| 80 | Wi-Fi Corporativo | `10.10.80.0/24` | `10.10.80.1` |
 
 - Braga y Coímbra no necesitan tantas VLANs como Porto, ya que no alojan la infraestructura crítica principal. Se tendrá en cuenta la separación por acceso: la red de invitados no tendrá acceso al resto de la red interna. Por defecto se bloqueará la comunicación entre VLANs y solo se permitirán las conexiones necesarias. El departamento de IT / Sistemas tendrá acceso a la VLAN de gestión de red y servidores para tareas de administración. Dirección y Administración no tendrá acceso directo a los servidores internos; accederá únicamente a las aplicaciones autorizadas mediante la plataforma correspondiente. 
 
@@ -84,6 +86,7 @@ Para mantener una numeración coherente, se utilizará el mismo número de VLAN 
 | 40 | Atención-Cliente | `10.20.40.0/24` | `10.20.40.1` |
 | 60 | Invitados | `10.20.60.0/24` | `10.20.60.1` |
 | 70 | Gestión de red | `10.20.70.0/24` | `10.20.70.1` |
+| 80 | Wi-Fi Corporativo | `10.10.80.0/24` | `10.10.80.1` |
 
 - Braga se centra en atención al cliente.
 
@@ -94,6 +97,7 @@ Para mantener una numeración coherente, se utilizará el mismo número de VLAN 
 | 40 | Atención-Cliente | `10.30.40.0/24` | `10.30.40.1` |
 | 60 | Invitados | `10.30.60.0/24` | `10.30.60.1` |
 | 70 | Gestión de red | `10.30.70.0/24` | `10.30.70.1` |
+| 80 | Wi-Fi Corporativo | `10.10.80.0/24` | `10.10.80.1` |
 
 - Coímbra se centra principalmente en el contenido académico y contará con una pequeña presencia de atención al cliente. 
 
