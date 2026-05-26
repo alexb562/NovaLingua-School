@@ -15,7 +15,7 @@
 | Servidor físico | Porto | 1 | Virtualización de servicios internos |
 | NAS principal | Porto | 1 | Archivos compartidos y copias locales |
 | NAS de respaldo | Braga | 1 | Replicación externa de backups |
-| UPS | Todas las sedes | 4 | Protección eléctrica |
+| UPS | Todas las sedes | 3 | Protección eléctrica |
 | Equipos de usuario | Todas las sedes | 60 + 5 reserva | Puestos de trabajo |
 | Impresoras multifunción | Todas las sedes | 4 | Impresión y escaneo |
 

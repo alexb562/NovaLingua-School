@@ -710,3 +710,155 @@ show ip route ospf
 | VLANs de usuarios        | VLAN 70 Gestión                  | Denegar por defecto | Evitar que usuarios normales administren infraestructura                              |
 | Entre sedes              | VLANs y servicios necesarios     | Permitir limitado   | Comunicación entre Porto, Braga y Coimbra según necesidad                             |
 | Cualquier VLAN           | Tráfico no definido              | Denegar por defecto | Aplicación del principio de mínimo privilegio                                         |
+
+| Service          | Location / VLAN       |  Suggested IP | Notes                                          |
+| ---------------- | --------------------- | ------------: | ---------------------------------------------- |
+| Active Directory | Porto VLAN 70         | `10.10.70.10` | Optional/basic identity service if implemented |
+| DNS              | External              |     `8.8.8.8` | No internal DNS server                         |
+| DHCP             | Routers               | VLAN gateways | DHCP per VLAN from router/firewall             |
+| File Server      | Porto VLAN 70         | `10.10.70.20` | Shared folders                                 |
+| Web / LMS        | Porto VLAN 70         | `10.10.70.30` | Platform/server placeholder                    |
+| Database         | Porto VLAN 70         | `10.10.70.40` | MySQL/MariaDB                                  |
+| NAS Porto        | Porto VLAN 70         | `10.10.70.50` | Main backups                                   |
+| NAS Braga        | Braga VLAN 70         | `10.20.70.50` | Backup replication                             |
+| VPN              | Routers/firewalls     |             — | Site-to-site and remote access                 |
+| Firewall         | All routers/firewalls |             — | VLAN isolation                                 |
+
+## Paso 1: Bloquear VLAN 60 a acceso interno
+### Porto
+```bash
+nft add table inet labfw
+nft list tables
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+nft list ruleset
+nft add rule inet labfw forward ip saddr 10.10.60.0/24 ip daddr 10.0.0.0/8 drop
+```
+- ping 10.20.60.1 - funciona
+- ping 10.10.70.10 - no funciona
+
+### Braga
+```bash
+nft add table inet labfw
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+nft add rule inet labfw forward ip saddr 10.20.60.0/24 ip daddr 10.0.0.0/8 drop
+```
+- ping 10.20.60.1 - funciona
+- ping 10.10.70.10 - no funciona
+
+### Coimbra
+```bash
+nft add table inet labfw
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+nft add rule inet labfw forward ip saddr 10.30.60.0/24 ip daddr 10.0.0.0/8 drop
+ping 10.30.60.1 #funciona
+ping 10.10.70.10 #no
+ping 10.20.30.10 #no
+```
+
+## Paso 2: Bloquear por defecto todo el tráfico a VLAN 70 (servidores)
+### Porto
+```bash
+nft add rule inet labfw forward ip saddr 10.10.20.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.10.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.40.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.50.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.70.0/24 drop
+#ping 10.10.70.10
+```
+
+### Braga
+```bash
+nft add rule inet labfw forward ip saddr 10.20.30.0/24 ip daddr 10.20.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.40.0/24 ip daddr 10.20.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.70.0/24 drop
+#ping 10.20.70.10
+```
+
+### Coimbra
+```bash
+nft add rule inet labfw forward ip saddr 10.30.30.0/24 ip daddr 10.30.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.30.40.0/24 ip daddr 10.30.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.30.80.0/24 ip daddr 10.30.70.0/24 drop
+#ping 10.30.70.10
+```
+
+## Paso 3: Bloquear tráfico desde VLAN 80
+### Porto
+```bash
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.10.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.20.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.40.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.50.0/24 drop
+#ping 10.20.80.1
+#ping 10.20.30.10
+#ping 10.20.40.10
+#ping 10.20.70.10
+```
+### Braga
+```bash
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.30.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.40.0/24 drop
+#ping 10.20.80.1
+#ping 10.20.30.10
+#ping 10.20.40.10
+#ping 10.20.70.10
+```
+
+### Coimbra
+```bash
+nft add rule inet labfw forward ip saddr 10.30.80.0/24 ip daddr 10.30.30.0/24 drop
+nft add rule inet labfw forward ip saddr 10.30.80.0/24 ip daddr 10.30.40.0/24 drop
+#ping 10.30.80.1
+#ping 10.30.30.10
+#ping 10.30.40.10
+#ping 10.30.70.10
+```
+
+## Paso 4: Guardar estado permanente
+- en /etc/rc.local
+### Porto
+```bash
+# Firewall lab rules - Porto
+
+nft delete table inet labfw 2>/dev/null
+
+nft add table inet labfw
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+
+# Bloquear invitados VLAN 60 hacia redes internas
+nft add rule inet labfw forward ip saddr 10.10.60.0/24 ip daddr 10.0.0.0/8 drop
+
+# Bloquear VLANs de usuarios hacia VLAN 70 Gestión/Servidores local
+nft add rule inet labfw forward ip saddr 10.10.10.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.20.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.40.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.50.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.70.0/24 drop
+
+# Bloquear Wi-Fi corporativo VLAN 80 hacia VLANs cableadas locales
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.10.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.20.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.40.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.50.0/24 drop
+```
+### Braga
+```bash
+# Firewall lab rules - Braga
+
+nft delete table inet labfw 2>/dev/null
+
+nft add table inet labfw
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+
+# Bloquear invitados VLAN 60 hacia redes internas
+nft add rule inet labfw forward ip saddr 10.20.60.0/24 ip daddr 10.0.0.0/8 drop
+
+# Bloquear VLANs de usuarios hacia VLAN 70 Gestión local
+nft add rule inet labfw forward ip saddr 10.20.30.0/24 ip daddr 10.20.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.40.0/24 ip daddr 10.20.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.70.0/24 drop
+
+# Bloquear Wi-Fi corporativo VLAN 80 hacia VLANs cableadas locales
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.30.0/24 drop
+nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.40.0/24 drop
+```
