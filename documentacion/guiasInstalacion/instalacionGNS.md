@@ -862,3 +862,77 @@ nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.70.0/24 dr
 nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.30.0/24 drop
 nft add rule inet labfw forward ip saddr 10.20.80.0/24 ip daddr 10.20.40.0/24 drop
 ```
+## Paso 5: Ajustar para cargar el cortafuegos al reiniciar
+- Pon sleep 30 en la primera linea de /etc/rc.local en cada router
+- En el caso que algo esté roto:
+```bash
+nft delete table inet labfw
+nft flush ruleset
+/etc/init.d/frr restart
+/etc/rc.local #recarga firewall
+```
+# Config de primer servidor
+- Máquina con un adaptador en NAT
+1. Preferences - VirtualBox VMs - new
+2. Añadir máquina desde la lista
+3. Edit - let GNS use any adapter
+4. En powershell
+```powershell
+New-NetFirewallRule -DisplayName "Allow ICMPv4 Echo" -Protocol ICMPv4 -IcmpType 8 -Action Allow
+```
+5. Añadir una regla established related para respuestas para conexiones ya establecidas desde el servidor
+```bash
+#!/bin/sh
+
+sleep 30
+
+# Firewall lab rules - Porto
+
+nft delete table inet labfw 2>/dev/null
+
+nft add table inet labfw
+nft 'add chain inet labfw forward { type filter hook forward priority 0; policy accept; }'
+
+# Permitir respuestas a conexiones ya iniciadas
+nft add rule inet labfw forward ct state established,related accept
+
+# Bloquear invitados VLAN 60 hacia redes internas
+nft add rule inet labfw forward ip saddr 10.10.60.0/24 ip daddr 10.0.0.0/8 drop
+
+# Bloquear VLANs de usuarios hacia VLAN 70 Gestión/Servidores local
+nft add rule inet labfw forward ip saddr 10.10.10.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.20.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.40.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.50.0/24 ip daddr 10.10.70.0/24 drop
+nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.70.0/24 drop
+```
+5. Pruebas de conectividad
+| Prueba                                                        | Resultado esperado                                  | Resultado |
+| ------------------------------------------------------------- | --------------------------------------------------- | --------- |
+| Router Porto → Windows Server `10.10.70.100`                  | Funciona                                            | Superado  |
+| Windows Server `10.10.70.100` → gateway `10.10.70.1`          | Funciona                                            | Superado  |
+| Windows Server VLAN 70 → PC Desarrollo `10.10.20.10`          | Funciona tras añadir la regla `established,related` | Superado  |
+| PC Desarrollo `10.10.20.10` → Windows Server `10.10.70.100`   | Falla / bloqueado                                   | Superado  |
+| VLAN 60 Invitados → su propia puerta de enlace                | Funciona                                            | Superado  |
+| VLAN 60 Invitados → redes internas / VLAN 70                  | Falla / bloqueado                                   | Superado  |
+| VLAN 80 Wi-Fi Corporativo → su propia puerta de enlace        | Funciona                                            | Superado  |
+| VLAN 80 Wi-Fi Corporativo → VLANs cableadas locales / VLAN 70 | Falla / bloqueado                                   | Superado  |
+| VLAN 70 Gestión → VLANs internas                              | Funciona                                            | Superado  |
+
+# Resumen de reglas hasta ahora
+| Tipo de tráfico                                     | Resultado                           |
+| --------------------------------------------------- | ----------------------------------- |
+| Invitados VLAN 60 → redes internas                  | Bloqueado                           |
+| VLANs de usuarios → VLAN 70 local                   | Bloqueado                           |
+| Wi-Fi corporativo VLAN 80 → VLANs cableadas locales | Bloqueado                           |
+| Wi-Fi corporativo VLAN 80 → VLAN 70 local           | Bloqueado                           |
+| VLAN 70 Gestión/Servidores → redes internas         | Permitido                           |
+| Respuestas a conexiones iniciadas por VLAN 70       | Permitido con `established,related` |
+| OSPF entre routers                                  | Permitido                           |
+
+# Si hay problemas con enrutamiento al reiniciar
+```bash
+nft delete table inet labfw
+nft flush ruleset
+
+/etc/rc.local
