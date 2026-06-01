@@ -934,5 +934,22 @@ nft add rule inet labfw forward ip saddr 10.10.80.0/24 ip daddr 10.10.70.0/24 dr
 ```bash
 nft delete table inet labfw
 nft flush ruleset
-
+/etc/init.d/frr reset
 /etc/rc.local
+```
+
+# Instalación AD
+```
+Hostname: DC01
+IP:       10.10.70.100
+Mask:     255.255.255.0
+Gateway:  10.10.70.1
+DNS:      10.10.70.100
+```
+- Instalar servicios de dominio de AD y AD DNS
+- Promover equipo a DC
+- nombre del bosque - novalingua.local
+
+
+
+
