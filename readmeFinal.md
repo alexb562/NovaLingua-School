@@ -219,7 +219,6 @@ La empresa necesita:
 - Wi-Fi corporativo para empleados.
 - Wi-Fi de invitados aislado de la red interna.
 - Políticas de grupo mediante GPO.
-- Sistema de copias de seguridad.
 - Documentación técnica y manual de usuario.
 
 
@@ -231,24 +230,24 @@ La red se organiza en tres sedes conectadas mediante routers OpenWrt dentro de G
 
 ### 5.2 Topología lógica
 #### Esquema abstracta
-![alt text](esquematicas/esquematicaTeoricaPorto.drawio.svg)
+![alt text](documentacion/esquematicas/esquematicaTeoricaPorto.drawio.svg)
 - Esquema lógica de Porto
 
-![alt text](esquematicas/esquematicaTeoricaCoimbra.drawio.svg)
+![alt text](documentacion/esquematicas/esquematicaTeoricaCoimbra.drawio.svg)
 - Esquema lógica de Coimbra
 
-![alt text](esquematicas/esquematicaTeoricaBraga.drawio.svg)
+![alt text](documentacion/esquematicas/esquematicaTeoricaBraga.drawio.svg)
 - Esquema lógica de Braga
 
 
 #### Esquema Packet Tracer
-![alt text](esquematicas/ptPorto.png)
-![alt text](esquematicas/ptCoimbra.png)
-![alt text](esquematicas/ptBraga.png)
+![alt text](documentacion/esquematicas/ptPorto.png)
+![alt text](documentacion/esquematicas/ptCoimbra.png)
+![alt text](documentacion/esquematicas/ptBraga.png)
 
 
 #### Esquema GNS
-![alt text](esquematicas/esquemaGNS.png)
+![alt text](documentacion/esquematicas/esquemaGNS.png)
 
 ### 5.3 Tabla de VLANs
 ```text
@@ -352,7 +351,7 @@ Para la mayoría de los dispositivos de red se comprará desde Unifi/Ubiquiti. V
 - En cuanto a NAS, no tiene que encargarse de las funcioines del servidor - solo backups de carpetas compartidas y redundancia.
 
 ##### Dell PowerEdge T360
-[url][https://www.pccomponentes.com/dell-poweredge-t360-intel-xeon-e-2478-16gb-480gb-ssd]
+[URL][https://www.pccomponentes.com/dell-poweredge-t360-intel-xeon-e-2478-16gb-480gb-ssd]
 
 | Especificación        | Dell PowerEdge T360                                                     |
 | --------------------- | ----------------------------------------------------------------------- |
@@ -381,7 +380,7 @@ Para la mayoría de los dispositivos de red se comprará desde Unifi/Ubiquiti. V
 ##### RAM servidor
 
 RigidRAM / Dell compatible 32GB DDR5 ECC UDIMM 4800MHz x2  
-[url][https://www.amazon.com/RigidRAM-Replacement-SNPP0YCGC-AC027076-PowerEdge/dp/B0D8B2H2SK]
+[URL][https://www.amazon.com/RigidRAM-Replacement-SNPP0YCGC-AC027076-PowerEdge/dp/B0D8B2H2SK]
 
 | Especificación        | RigidRAM / Dell compatible 32GB DDR5 ECC UDIMM |
 | --------------------- | ---------------------------------------------- |
@@ -401,7 +400,7 @@ RigidRAM / Dell compatible 32GB DDR5 ECC UDIMM 4800MHz x2
 
 ##### Almacenamiento
 Patriot 2TB SSD x2
-[url][https://www.pccomponentes.com/disco-duro-patriot-p210-2-5-ssd-2tb-sata-3]
+[URL][https://www.pccomponentes.com/disco-duro-patriot-p210-2-5-ssd-2tb-sata-3]
 
 | Especificación                | Patriot P210 SSD 2TB SATA III                          |
 | ----------------------------- | ------------------------------------------------------ |
@@ -424,7 +423,7 @@ Patriot 2TB SSD x2
 
 ##### NAS
 Synology DS923+
-[url][https://www.amazon.com/Synology-DS923-Diskstation-Dual-Core-LAN-Port/dp/B0BKPXZDCY]
+[URL][https://www.amazon.com/Synology-DS923-Diskstation-Dual-Core-LAN-Port/dp/B0BKPXZDCY]
 
 
 ##### Almacenamiento
@@ -486,7 +485,7 @@ Seagate IronWolf 8TB NAS HDD x8
 ##### UPS / SAI Porto
 
 APC Smart-UPS C 1500VA LCD RM 2U 230V x2  
-[url][https://www.apc.com/]
+[URL][https://www.apc.com/]
 
 | Especificación | APC Smart-UPS C 1500VA LCD RM 2U 230V |
 |---|---|
@@ -505,7 +504,7 @@ APC Smart-UPS C 1500VA LCD RM 2U 230V x2
 ##### UPS / SAI Braga
 
 APC Back-UPS Pro 1600VA x1  
-[url][https://www.apc.com/]
+[URL][https://www.apc.com/]
 
 | Especificación | APC Back-UPS Pro 1600VA |
 |---|---|
@@ -524,7 +523,7 @@ APC Back-UPS Pro 1600VA x1
 ##### UPS / SAI Coímbra
 
 APC Back-UPS 1600VA Tower 230V x1  
-[url][https://www.apc.com/]
+[URL][https://www.apc.com/]
 
 | Especificación | APC Back-UPS 1600VA Tower 230V |
 |---|---|
@@ -569,7 +568,7 @@ Se utilizará un rack estándar de 19” en la sede principal de Porto, ya que e
 ##### Rack Porto
 
 StarTech.com 24U Server Rack Cabinet  
-[url][https://www.amazon.com/StarTech-com-24U-Server-Rack-Cabinet/dp/B071KW98RM]
+[URL][https://www.amazon.com/StarTech-com-24U-Server-Rack-Cabinet/dp/B071KW98RM]
 
 | Especificación | StarTech.com 24U Server Rack Cabinet |
 |---|---|
@@ -592,7 +591,7 @@ StarTech.com 24U Server Rack Cabinet
 - Braga tendrá menos infraestructura que Porto. Sólo se necesitará un rack entre 6 - 9U (9 si queremos dejar espacio para expansión).
 
 Rack Mural 19" 9U F450mm Puerta de Cristal  
-[url][https://ekanet.es/rack-9u-puerta-cristal/49-rack-mural-19-9u-f450mm-sin-accesorios-puerta-de-cristal.html]
+[URL][https://ekanet.es/rack-9u-puerta-cristal/49-rack-mural-19-9u-f450mm-sin-accesorios-puerta-de-cristal.html]
 
 | Especificación | Rack Mural 19" 9U F450mm Puerta de Cristal |
 |---|---|
@@ -616,7 +615,7 @@ Rack Mural 19" 9U F450mm Puerta de Cristal
 ##### Rack Coimbra
 
 Rack Mural 19" 6U F450mm Puerta Perforada  
-[url][https://ekanet.es/rack-6u-puerta-perforada/1901-rack-mural-6u-f450mm-sin-accesorios-puerta-perforada-19.html]
+[URL][https://ekanet.es/rack-6u-puerta-perforada/1901-rack-mural-6u-f450mm-sin-accesorios-puerta-perforada-19.html]
 
 | Especificación | Rack Mural 19" 6U F450mm Puerta Perforada |
 |---|---|
@@ -642,7 +641,7 @@ Rack Mural 19" 6U F450mm Puerta Perforada
 #### Porto
 ##### Router
 Dream Machine Pro
-[url][https://eu.store.ui.com/eu/en/category/cloud-gateways-large-scale/products/udm-pro]
+[URL][https://eu.store.ui.com/eu/en/category/cloud-gateways-large-scale/products/udm-pro]
 
 | Especificación                | Ubiquiti UniFi Dream Machine Pro                                         |
 | ----------------------------- | ------------------------------------------------------------------------ |
@@ -662,7 +661,7 @@ Dream Machine Pro
 
 ##### Switch central
 Standard 48 PoE
-[url][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-48-poe]
+[URL][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-48-poe]
 
 | Especificación      | Ubiquiti UniFi Switch 48 PoE                              |
 | ------------------- | --------------------------------------------------------- |
@@ -679,7 +678,7 @@ Standard 48 PoE
 
 ##### Switches access
 Standard 24 PoE
-[url][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
+[URL][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
 
 | Especificación     | Ubiquiti UniFi Switch 24 PoE                                                   |
 | ------------------ | ------------------------------------------------------------------------------ |
@@ -696,7 +695,7 @@ Standard 24 PoE
 
 ##### Punto de acceso
 U6+ 
-[url][https://eu.store.ui.com/eu/en/category/wifi-flagship/products/u6-plus]
+[URL][https://eu.store.ui.com/eu/en/category/wifi-flagship/products/u6-plus]
 
 | Especificación     | Ubiquiti UniFi U6+                                              |
 | ------------------ | --------------------------------------------------------------- |
@@ -712,7 +711,7 @@ U6+
 #### Braga
 ##### Router
 Cloud Gateway Ultra 
-[url][https://eu.store.ui.com/eu/en/category/all-cloud-gateways]
+[URL][https://eu.store.ui.com/eu/en/category/all-cloud-gateways]
 
 
 | Especificación                | Ubiquiti UniFi Cloud Gateway Ultra                                    |
@@ -730,7 +729,7 @@ Cloud Gateway Ultra
 
 ##### Switch gestionable
 Standard 24 PoE
-[url][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
+[URL][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
 
 | Especificación     | Ubiquiti UniFi Switch 24 PoE                                                   |
 | ------------------ | ------------------------------------------------------------------------------ |
@@ -760,7 +759,7 @@ Standard 24 PoE
 #### Coimbra
 ##### Router
 Cloud Gateway Ultra 
-[url][https://eu.store.ui.com/eu/en/category/all-cloud-gateways]
+[URL][https://eu.store.ui.com/eu/en/category/all-cloud-gateways]
 
 
 | Especificación                | Ubiquiti UniFi Cloud Gateway Ultra                                    |
@@ -778,7 +777,7 @@ Cloud Gateway Ultra
 
 ##### Switch Gestionable
 Standard 24 PoE
-[url][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
+[URL][https://eu.store.ui.com/eu/en/category/switching-standard/products/usw-24-poe]
 
 | Especificación     | Ubiquiti UniFi Switch 24 PoE                                                   |
 | ------------------ | ------------------------------------------------------------------------------ |
@@ -920,7 +919,7 @@ Se utilizarán impresoras multifunción láser para cubrir las necesidades de im
 | Costes mensuales aproximados | 1.300 € - 1.500 €/mes |
 
 ### 6.8 Esquema física
-![alt text](esquematicas/racksFinalPT.png)
+![alt text](documentacion/esquematicas/racksFinalPT.png)
 - Desde la izquierda a la derecha - Porto, Braga, Coimbra
 
 
@@ -3295,7 +3294,7 @@ Este departamento será responsable de:
 | Departamento                   | Herramientas principales                             | Habilidades clave                                          | Nivel de acceso                    |
 | ------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- |
 | Dirección y Administración     | Ofimática, facturación, correo, carpetas compartidas | Gestión, finanzas, organización, protección de datos       | Alto a información administrativa  |
-| IT / Sistemas                  | AD, DNS, DHCP, firewall, VPN, servidores, NAS        | Redes, servidores, seguridad, soporte, backups             | Administración técnica             |
+| IT / Sistemas                  | AD, DNS, DHCP, firewall, VPN, NAS, servidores        | Redes, servidores, seguridad, soporte, backups             | Administración técnica             |
 | Desarrollo y Plataforma Online | VS Code, Git, MySQL, Angular, Spring Boot, LMS       | Programación, bases de datos, APIs, seguridad web          | Técnico limitado                   |
 | Equipo Académico               | LMS, videoconferencia, calendario, materiales        | Docencia, planificación, seguimiento académico             | Acceso académico                   |
 | Atención al Cliente            | CRM, tickets, correo, teléfono, LMS                  | Comunicación, resolución de problemas, atención al público | Acceso limitado a datos de alumnos |
@@ -3377,11 +3376,11 @@ De esta manera, NovaLingua School puede proteger mejor sus datos, repartir respo
 
 | Nº | Prueba | Resultado esperado | Resultado obtenido | Estado |
 |---:|---|---|---|---|
-| 1 | Bloquear Panel Control | Usuario no técnico no puede acceder | Configurado | Pendiente de captura |
-| 2 | Fondo corporativo | Se aplica wallpaper corporativo | Configurado | Pendiente de captura |
-| 3 | Mapeo de carpetas | Se asigna unidad de red | Parcial | En revisión |
-| 4 | Bloquear CMD | Usuario no técnico no puede abrir CMD | Configurado | Pendiente de validación |
-| 5 | Mensaje inicio sesión | Aparece aviso legal | Configurado | Pendiente de captura |
+| 1 | Bloquear Panel Control | Usuario no técnico no puede acceder | Configurado | Superado |
+| 2 | Fondo corporativo | Se aplica wallpaper corporativo | Configurado | Superado |
+| 3 | Mapeo de carpetas | Se asigna unidad de red | Parcial | Problemas con interfaz gráfica |
+| 4 | Bloquear CMD | Usuario no técnico no puede abrir CMD | Configurado |
+| 5 | Mensaje inicio sesión | Aparece aviso legal | Configurado | Superado |
 
 ### A.6 Pruebas de MySQL
 
