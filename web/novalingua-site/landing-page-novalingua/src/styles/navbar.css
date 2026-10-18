@@ -1,0 +1,211 @@
+/* navbar.css */
+:root{
+ --bg: #ffffff;
+  --text-main: #263238;   /* Gris ultra oscuro para títulos (estilo Nexcent) */
+  --text-muted: #4d5965;  /* Gris medio para enlaces */
+  --brand-color: #143a63; /* Tu azul corporativo de Novalingua */
+  --brand-hover: #1d528d; /* Un azul un poco más claro para el hover */
+  --container-width: 1200px;
+  --height: 84px;
+}
+
+html, body {
+margin: 0;
+  padding: 0;
+  font-family: 'Elms Sans', sans-serif;
+  background-color: #ffffff;
+}
+
+*{box-sizing:border-box}
+.navbar {
+  background: var(--bg);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Eliminamos el borde negro e introducemos una sombra imperceptible abajo */
+  border-bottom: 1px solid #f1f5f9; 
+}
+
+/* Centrado y alineación interna */
+.nav-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: var(--height);
+}
+
+/* Brand / Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-main {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+}
+
+.brand-sub {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+/* Enlaces del centro: Estilo limpio, tipografía tipo oración (no todo mayúsculas si no quieres, aunque lo mantengo limpio) */
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--brand-color); /* Al pasar el ratón se vuelve de tu color azul */
+}
+
+/* Acciones de la derecha: El botón estilo Nexcent pero con tu azul */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-login {
+  color: var(--brand-color); /* Usa tu azul para el texto */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+  color: var(--brand-hover); /* Se aclara un poco al pasar el cursor */
+}
+
+/* Botón de Sign Up (Destacado con fondo azul) */
+.btn-signup {
+  background: var(--brand-color);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-signup:hover {
+  background: var(--brand-hover);
+}
+
+.btn-signup:active {
+  transform: scale(0.98);
+}
+
+/* Estilos para el Menú Móvil Adaptado */
+.mobile-divider {
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 8px 0;
+}
+
+.btn-login-mobile {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-signup.mobile {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--brand-color);
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Menú Hamburguesa para Móviles (Corregido el aplastamiento) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+}
+
+/* Menú desplegable móvil */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: var(--bg);
+  border-top: 1px solid #f1f5f9;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 900px) {
+.nav-links { display: none; }
+  .menu-toggle { display: flex; }
+  .brand-text { display: flex; }
+  .mobile-menu.open { display: flex; }
+  .nav-actions .btn-login,
+  .nav-actions .btn-signup { 
+    display: none; 
+  }
+}

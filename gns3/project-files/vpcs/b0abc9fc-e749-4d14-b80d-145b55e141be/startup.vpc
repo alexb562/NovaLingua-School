@@ -1,0 +1,2 @@
+set pcname Ventas
+ip 10.10.50.10 10.10.50.1 24

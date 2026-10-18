@@ -1,0 +1,2 @@
+set pcname WifiCorpPorto
+ip 10.10.80.10 10.10.80.1 24

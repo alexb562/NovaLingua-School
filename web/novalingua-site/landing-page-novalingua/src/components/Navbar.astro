@@ -1,0 +1,60 @@
+---
+
+---
+
+<link rel="stylesheet" href="src/styles/navbar.css" />
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <!-- Left: logo -->
+    <a class="brand" href="/">
+  <img src="/logo.png" alt="logo nova lingua" class="logo-img">
+  <div class="brand-text">
+    <div class="brand-main">NOVALINGUA</div>
+    <div class="brand-sub">SCHOOL</div>
+  </div>
+</a>
+
+    <!-- Center: links -->
+    <div class="nav-links" id="nav-links">
+      <a href="/">INICIO</a>
+      <a href="/cursos">CURSOS</a>
+      <a href="/profesores">PROFESORES</a>
+      <a href="/sobre-nosotros">SOBRE NOSOTROS</a>
+    </div>
+
+    <!-- Right: contacto -->
+    <div class="nav-actions">
+      <a class="btn-login" href="#">Iniciar Sesión</a>
+      <a class="btn-signup" href="#">Registrarse</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="/">INICIO</a>
+    <a href="/cursos">CURSOS</a>
+    <a href="/profesores">PROFESORES</a>
+    <a href="/sobre-nosotros">SOBRE NOSOTROS</a>
+ <hr class="mobile-divider" /> <a class="btn-login-mobile" href="#">Iniciar Sesión</a>
+    <a class="btn-signup mobile" href="#">Registrarse</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("menu-toggle");
+      const mobile = document.getElementById("mobile-menu");
+      if (!btn || !mobile) return;
+      btn.addEventListener("click", () => {
+        const open = mobile.getAttribute("aria-hidden") === "false";
+        mobile.setAttribute("aria-hidden", String(!open));
+        mobile.classList.toggle("open");
+      });
+    });
+  </script>
+</nav>

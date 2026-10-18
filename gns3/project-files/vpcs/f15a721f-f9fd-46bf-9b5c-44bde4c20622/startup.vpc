@@ -1,0 +1,2 @@
+set pcname GestionPorto
+ip 10.10.70.20 10.10.70.1 24

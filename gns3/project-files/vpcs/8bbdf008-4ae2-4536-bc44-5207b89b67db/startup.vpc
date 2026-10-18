@@ -1,0 +1,2 @@
+set pcname DireccionAdmin
+ip 10.10.10.10 10.10.10.1 24
